@@ -30,3 +30,7 @@ Route::name('meow.')->prefix('meow')->group(function () {
         return view('meow.meow');
     })->name('meow.meow.meow');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
