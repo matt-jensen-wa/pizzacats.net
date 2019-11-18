@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'name' => 'Meow',
     'submit' => 'Meow!',
     'email' => 'E-Meow',
     'password' => 'Meow meow',

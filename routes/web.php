@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('meow.index');
+    return view('meow');
 });
 
 Route::get('meow', function(){
