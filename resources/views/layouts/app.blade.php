@@ -75,6 +75,25 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{session('locale', 'en')}} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @foreach(['en', 'fj', 'es'] as $locale)
+                                    <a class="dropdown-item" href="#"
+                                        onclick="event.preventDefault();
+                                        document.getElementById('locale-form-{{$locale}}').submit();">
+                                        {{ $locale }} 
+                                    </a>
+                                    <form id="locale-form-{{$locale}}" method="GET" style="display: none;">
+                                        <input type="hidden" name="locale" value="{{$locale}}">
+                                    </form>
+                        
+                                @endforeach
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

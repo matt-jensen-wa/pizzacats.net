@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('meow');
 });
+Route::get('/lang', function () {
+    return view('meow');
+})->name('lang');
 
 Route::get('meow', function(){
     return view('meow.meow');
